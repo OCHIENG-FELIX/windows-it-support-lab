@@ -27,12 +27,12 @@ The objective is to develop and demonstrate a structured approach to identifying
 
 | No. | Scenario | Status |
 |---|---|---|
-| 01 | Slow Computer Troubleshooting | Planned |
-| 02 | High CPU and Memory Usage | Planned |
-| 03 | Software Installation and Application Errors | Planned |
-| 04 | Network Connectivity Troubleshooting | Planned |
-| 05 | Device Driver Issues | Planned |
-| 06 | Windows System Diagnostics | Planned |
+| 01 | Slow Computer Troubleshooting | Documentation prepared – practical testing pending.|
+| 02 | High CPU and Memory Usage | Documentation prepared – practical testing pending.  |
+| 03 | Software Installation and Application Errors | Documentation prepared – practical testing pending.  |
+| 04 | Network Connectivity Troubleshooting | Documentation prepared – practical testing pending. |
+| 05 | Device Driver Issues | Documentation prepared – practical testing pending.|
+| 06 | Windows System Diagnostics | Documentation prepared – practical testing pending. |
 
 ## Troubleshooting Methodology
 
