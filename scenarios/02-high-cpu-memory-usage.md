@@ -63,15 +63,11 @@ Depending on the findings:
 - Review startup applications periodically.
 - Ensure the computer meets the resource requirements of installed applications.
 
-## 8. Current Status
+### Practical Implementation Status
 
-**Documentation status:** Prepared.
+**Status:** Practical validation pending.
 
-**Practical testing status:** Pending.
-
-**Actual root cause:** Not yet established.
-
-**Actual resolution:** Pending practical investigation.
+The troubleshooting procedure is documented, but a separate software installation error has not yet been reproduced and investigated in a practical exercise.
 
 ## Skills Demonstrated
 
