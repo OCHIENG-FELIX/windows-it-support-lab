@@ -60,15 +60,13 @@ After applying the appropriate resolution:
 - Review startup applications periodically.
 - Perform regular preventive maintenance.
 
-## 8. Current Status
+### Practical Implementation Status
 
-**Documentation status:** Prepared.
+**Status:** Practically investigated.
 
-**Practical testing status:** Pending.
+Task Manager was used to investigate memory consumption, identify resource-intensive processes, and evaluate the impact of closing unnecessary Chrome tabs.
 
-**Actual root cause:** Not yet established.
-
-**Actual resolution:** Pending practical investigation.
+Available physical memory increased from 1.13 GB to 1.9 GB following the troubleshooting action.
 
 ## Skills Demonstrated
 
