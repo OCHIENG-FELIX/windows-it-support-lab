@@ -1,130 +1,98 @@
-# Scenario 06: Windows System Diagnostics
+# Scenario 06: Windows System Diagnostics and Performance Monitoring
 
-## 1. Problem Description
+## 1. Scenario Overview
 
-A user reports that their Windows 11 computer experiences unexpected restarts, application crashes, and occasional system errors.
+**Objective:** Investigate Windows system performance using System Information and Task Manager.
 
-The issue appears intermittently, making it necessary to investigate system health and identify possible causes.
+Practical testing was performed on an HP EliteBook 845 G7 running Windows 11 Pro.
 
-## 2. Symptoms
+## 2. System Information
 
-- Unexpected computer restarts.
-- Applications crashing unexpectedly.
-- Windows error notifications.
-- System freezing.
-- Unusual system behaviour.
-- Occasional startup problems.
+Used `msinfo32` to inspect the computer configuration.
 
-## 3. Possible Causes
+| Property | Result |
+|---|---|
+| Operating System | Windows 11 Pro |
+| OS Build | 22631 |
+| Manufacturer | HP |
+| Model | HP EliteBook 845 G7 Notebook PC |
+| Processor | AMD Ryzen 5 PRO 4560U |
+| Processor Speed | 2.10 GHz |
+| CPU Cores | 6 |
+| Graphics | AMD Radeon Graphics |
+| Installed RAM | 8 GB |
 
-- Corrupted Windows system files.
-- Outdated or incompatible device drivers.
-- Hardware problems.
-- Software conflicts.
-- Failed Windows updates.
-- Storage-related issues.
-- Overheating or power-related problems.
+## 3. Memory Diagnostics
 
-## 4. Diagnostic Approach
+Initial memory observations:
 
-### Step 1: Review System Information
+| Metric | Initial Result |
+|---|---:|
+| Installed RAM | 8 GB |
+| Available Physical Memory | 1.13 GB |
+| Available Virtual Memory | 6.21 GB |
+| Total Virtual Memory | 17.3 GB |
+| Committed Memory | 11.7 / 17.3 GB |
 
-Run:
+## 4. Process Investigation
 
-`msinfo32`
+Used Task Manager to identify processes consuming the most memory.
 
-Inspect:
-- Operating system information.
-- Installed memory.
-- Hardware configuration.
-- System components.
+Initial observations:
 
-### Step 2: Review Windows Event Logs
+| Process | Memory Usage |
+|---|---:|
+| Google Chrome | 3362.4 MB |
+| index.html | 293.4 MB |
+| Microsoft Defender | 109.0 MB |
 
-Run:
+Further investigation using Chrome Task Manager identified:
 
-`eventvwr.msc`
+| Chrome Process | Memory Usage |
+|---|---:|
+| Portfolio guidance plan | 926588 KB |
+| windows-it-support-lab/scenarios | 368296 KB |
+| Felix Otieno Ochieng' / IT Support | 203104 KB |
 
-Inspect:
-- System logs.
-- Application logs.
-- Critical events.
-- Error events.
-- Events occurring around the reported failure time.
+Six Chrome tabs were initially open.
 
-### Step 3: Check System File Integrity
+## 5. Troubleshooting Action
 
-Open Command Prompt as Administrator and run:
+After confirming that three tabs were no longer required, they were closed.
 
-`sfc /scannow`
+No critical processes were terminated, and Microsoft Defender was not disabled.
 
-This checks protected Windows system files and attempts repairs where possible.
+## 6. Before-and-After Results
 
-### Step 4: Investigate Storage
+| Metric | Before | After |
+|---|---:|---:|
+| Available Memory | 1.13 GB | 1.9 GB |
+| Committed Memory | 11.7 GB | 9.8 GB |
+| Installed RAM | 8 GB | 8 GB |
 
-Run:
+Available physical memory increased by approximately 770 MB.
 
-`diskmgmt.msc`
+Committed memory decreased by approximately 1.9 GB.
 
-Inspect:
-- Disk configuration.
-- Partition status.
-- Available storage space.
+## 7. User Experience Verification
 
-Use appropriate storage health diagnostics when hardware problems are suspected.
+After closing unnecessary browser tabs, the user reported improved computer responsiveness when switching between applications, opening folders, and browsing websites.
 
-### Step 5: Investigate Recent Changes
+## 8. Conclusion
 
-Review:
-- Recently installed applications.
-- Recent Windows updates.
-- Driver updates.
-- Changes to system configuration.
+The investigation identified Google Chrome as the largest memory-consuming application.
 
-## 5. Recommended Resolutions
+Closing unnecessary browser tabs reduced memory pressure and improved system responsiveness.
 
-Depending on the findings:
+The exercise demonstrated the importance of investigating resource usage, identifying the underlying cause, obtaining user confirmation before changes, and verifying results after taking corrective action.
 
-- Repair corrupted system files.
-- Install approved Windows updates.
-- Update or roll back problematic device drivers.
-- Remove conflicting software through approved procedures.
-- Investigate suspected hardware failures.
-- Escalate serious or recurring system failures to Level 2 support or the appropriate specialist.
+## 9. Skills Practised
 
-## 6. Verification
-
-- Restart the computer where required.
-- Confirm that Windows starts successfully.
-- Test applications previously experiencing errors.
-- Review new Event Viewer entries.
-- Monitor the system for recurring failures.
-- Confirm with the user that normal operation has resumed.
-
-## 7. Preventive Recommendations
-
-- Maintain regular backups.
-- Keep Windows and drivers appropriately updated.
-- Install trusted software only.
-- Monitor system health.
-- Document recurring system errors.
-- Follow organizational maintenance and security policies.
-
-## 8. Current Status
-
-**Documentation status:** Prepared.
-
-**Practical testing status:** Pending.
-
-**Actual root cause:** Not yet established.
-
-**Actual resolution:** Pending practical investigation.
-
-## Skills Demonstrated
-
-- Windows system diagnostics.
-- Event Viewer analysis.
-- System file integrity checking.
-- Hardware and software investigation.
-- Windows maintenance.
-- Technical documentation and escalation.
+- Windows System Information (`msinfo32`).
+- Task Manager performance monitoring.
+- Physical and virtual memory interpretation.
+- Process-level memory investigation.
+- Chrome Task Manager.
+- Performance troubleshooting.
+- Before-and-after verification.
+- Technical documentation.
