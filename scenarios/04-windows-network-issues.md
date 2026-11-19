@@ -107,15 +107,13 @@ Depending on the findings:
 - Document recurring connectivity incidents.
 - Escalate infrastructure-related problems appropriately.
 
-## 8. Current Status
+### Practical Implementation Status
 
-**Documentation status:** Prepared.
+**Status:** Practically investigated.
 
-**Practical testing status:** Pending.
+Basic network connectivity and DNS resolution were investigated using Windows diagnostic commands.
 
-**Actual root cause:** Not yet established.
-
-**Actual resolution:** Pending practical investigation.
+An Event Viewer DNS timeout warning was examined and compared with subsequent successful DNS resolution tests. No persistent DNS fault was confirmed.
 
 ## Skills Demonstrated
 
