@@ -1,81 +1,85 @@
-# Scenario 05: Windows Device Driver Issues
+# Scenario 05: Windows Device Manager and Driver Troubleshooting
 
-## 1. Problem Description
+## 1. Scenario Overview
 
-A user reports that a hardware device, such as a printer, network adapter, audio device, or keyboard, is not functioning correctly on a Windows 11 computer.
+**Objective:** Inspect Windows hardware devices, identify potential driver issues, and assess device status using Device Manager.
 
-## 2. Symptoms
+This practical exercise was performed on a new Windows 11 computer.
 
-- Hardware device is not detected.
-- Device displays an error in Device Manager.
-- Network adapter is missing or malfunctioning.
-- Audio device produces no sound.
-- Printer fails to communicate with the computer.
-- Windows displays a driver-related error.
+## 2. Practical Investigation
 
-## 3. Possible Causes
+### Step 1: Open Device Manager
 
-- Missing device drivers.
-- Outdated or incompatible drivers.
-- Corrupted driver installation.
-- Failed Windows updates.
-- Hardware connection problems.
-- Faulty hardware.
-- Incorrect device configuration.
+Opened Device Manager using the Windows + X shortcut.
 
-## 4. Diagnostic Approach
+Inspected the available hardware categories for:
+- Yellow warning symbols.
+- Disabled devices.
+- Unknown devices.
 
-1. Identify the affected hardware device.
-2. Check physical connections where applicable.
-3. Open Device Manager using `devmgmt.msc`.
-4. Inspect the device status and any warning symbols.
-5. Open device properties and review the error message or status code.
-6. Check the installed driver version and provider.
-7. Investigate recent driver or Windows updates.
-8. Determine whether the issue is software-related or potentially hardware-related.
+**Observation:** No warning symbols, disabled-device indicators, or unknown devices were identified.
 
-## 5. Recommended Resolutions
+### Step 2: Inspect Network Adapter
 
-Depending on the findings:
+Expanded Network adapters and opened the properties of the wireless network adapter.
 
-- Reconnect the affected hardware device.
-- Install the appropriate driver from the manufacturer's official website.
-- Update an outdated driver using an approved method.
-- Roll back a recently updated driver if it caused the problem and rollback is available.
-- Reinstall a corrupted driver where appropriate.
-- Escalate suspected hardware failures to the relevant support team.
+**Device identified:**
 
-## 6. Verification
+Intel(R) Wi-Fi 6 AX200 160MHz
 
-- Confirm that Windows detects the device.
-- Check Device Manager for device errors.
-- Test the hardware's basic functionality.
-- Confirm that the original issue no longer occurs.
-- Ask the user to verify that the device works as expected.
+### Step 3: Inspect Device Status
 
-## 7. Preventive Recommendations
+Checked the General tab under the adapter's Properties.
 
-- Obtain drivers from trusted manufacturer sources.
-- Maintain appropriate driver versions.
-- Follow organizational update policies.
-- Document recurring hardware issues.
-- Avoid installing incompatible or unofficial drivers.
+**Result:** Windows reported:
 
-## 8. Current Status
+`This device is working properly.`
 
-**Documentation status:** Prepared.
+### Step 4: Inspect Driver Information
 
-**Practical testing status:** Pending.
+Opened the Driver tab and recorded:
 
-**Actual root cause:** Not yet established.
+| Property | Observation |
+|---|---|
+| Driver Provider | Intel |
+| Driver Version | 23.120.0.3 |
+| Device Status | Working properly |
 
-**Actual resolution:** Pending practical investigation.
+No driver updates or modifications were performed.
 
-## Skills Demonstrated
+## 3. Troubleshooting Knowledge Applied
 
-- Windows Device Manager.
-- Hardware troubleshooting.
-- Device driver management.
-- Hardware and software diagnostics.
-- Technical problem-solving.
-- User support and documentation.
+Considered a simulated scenario in which a user experiences frequent Wi-Fi disconnections despite Device Manager reporting that the adapter is functioning properly.
+
+Identified the appropriate next investigations:
+
+1. Check wireless signal strength.
+2. Determine whether other devices experience the same problem.
+3. Check connectivity to the default gateway.
+4. Investigate possible wireless interference.
+5. Examine router or access-point connectivity.
+
+**Decision:** Investigate network conditions before attempting driver reinstallation or hardware replacement.
+
+## 4. Key Findings
+
+- Device Manager showed no visible hardware or driver warnings.
+- The Intel Wi-Fi adapter was detected successfully.
+- Windows reported that the adapter was functioning properly.
+- Driver information was successfully identified.
+- No unnecessary driver modifications were made.
+
+## 5. Skills Practised
+
+- Windows Device Manager navigation.
+- Hardware identification.
+- Driver information inspection.
+- Basic driver fault assessment.
+- Network adapter troubleshooting.
+- Evidence-based troubleshooting decisions.
+
+## 6. Practical Outcome
+
+**Status:** Practical inspection completed.
+
+The exercise confirmed that the network adapter had no visible Device Manager errors. It did not establish that all possible wireless connectivity problems were absent.
